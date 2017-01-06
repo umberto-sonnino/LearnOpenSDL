@@ -29,7 +29,10 @@ GLuint texture1, texture2;
 Shader *shader = nullptr;
 
 GLdouble deltaTime = 0.0f;
-std::chrono::high_resolution_clock::time_point lastFrame = std::chrono::high_resolution_clock::now();
+//std::chrono::high_resolution_clock::time_point lastFrame = std::chrono::high_resolution_clock::now();
+Uint64 timeNow = SDL_GetPerformanceCounter();
+Uint64 timeLast = timeNow;
+Uint64 frequency = SDL_GetPerformanceFrequency();
 
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
@@ -39,12 +42,18 @@ bool keys[1024];
 
 GLdouble getDelta()
 {
+#if 0
     auto timeCurrent = std::chrono::high_resolution_clock::now();
     auto timeDiff = std::chrono::duration_cast<std::chrono::nanoseconds> (timeCurrent - lastFrame);
     deltaTime = timeDiff.count();
     deltaTime /= 100000; // Nanoseconds into seconds
     
     lastFrame = timeCurrent;
+#endif
+    
+    timeLast = timeNow;
+    timeNow = SDL_GetPerformanceCounter();
+    deltaTime = GLdouble(timeNow - timeLast)*(10000) / GLdouble(frequency);
     
     return deltaTime;
 }
