@@ -8,23 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		E4DC204B1DF30E2F00B11939 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4DC204A1DF30E2F00B11939 /* main.cpp */; };
+		E4DC20531DF30F6300B11939 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20521DF30F6300B11939 /* libSDL2.a */; };
+		E4DC20551DF32D4A00B11939 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20541DF32D4A00B11939 /* OpenGL.framework */; };
+		E4DC20571DF32D7A00B11939 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20561DF32D7A00B11939 /* libGLEW.a */; };
+		E4DC20691DF3369F00B11939 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20681DF3369F00B11939 /* libSOIL.a */; };
+		E4DC206B1DF336F800B11939 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC206A1DF336F800B11939 /* CoreFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E4DC20451DF30E2F00B11939 /* CopyFiles */ = {
+		E4DC20451DF30E2F00B11939 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E4C80B9C1DF61B7600152A19 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = awesomeface.png; path = SDL2/awesomeface.png; sourceTree = "<group>"; };
+		E4C80B9D1DF977BB00152A19 /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		E4DC20471DF30E2F00B11939 /* SDL2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDL2; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DC204A1DF30E2F00B11939 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E4DC20521DF30F6300B11939 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = ../../../../../usr/local/Cellar/sdl2/2.0.5/lib/libSDL2.a; sourceTree = "<group>"; };
+		E4DC20541DF32D4A00B11939 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		E4DC20561DF32D7A00B11939 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.a; sourceTree = "<group>"; };
+		E4DC205D1DF32EC100B11939 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		E4DC20681DF3369F00B11939 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSOIL.a; sourceTree = "<group>"; };
+		E4DC206A1DF336F800B11939 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		E4DC206C1DF3378900B11939 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.glsl; sourceTree = "<group>"; };
+		E4DC206D1DF3379C00B11939 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.glsl; sourceTree = "<group>"; };
+		E4DC20721DF487AB00B11939 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = container.jpg; path = SDL2/container.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DC206B1DF336F800B11939 /* CoreFoundation.framework in Frameworks */,
+				E4DC20551DF32D4A00B11939 /* OpenGL.framework in Frameworks */,
+				E4DC20531DF30F6300B11939 /* libSDL2.a in Frameworks */,
+				E4DC20691DF3369F00B11939 /* libSOIL.a in Frameworks */,
+				E4DC20571DF32D7A00B11939 /* libGLEW.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +63,10 @@
 		E4DC203E1DF30E2F00B11939 = {
 			isa = PBXGroup;
 			children = (
+				E4DC20631DF32ED300B11939 /* Resources */,
 				E4DC20491DF30E2F00B11939 /* SDL2 */,
 				E4DC20481DF30E2F00B11939 /* Products */,
+				E4DC20511DF30F6300B11939 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +81,34 @@
 		E4DC20491DF30E2F00B11939 /* SDL2 */ = {
 			isa = PBXGroup;
 			children = (
+				E4DC205D1DF32EC100B11939 /* Shader.h */,
 				E4DC204A1DF30E2F00B11939 /* main.cpp */,
+				E4DC206C1DF3378900B11939 /* vertex.glsl */,
+				E4DC206D1DF3379C00B11939 /* fragment.glsl */,
+				E4C80B9D1DF977BB00152A19 /* Camera.h */,
 			);
 			path = SDL2;
+			sourceTree = "<group>";
+		};
+		E4DC20511DF30F6300B11939 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4DC206A1DF336F800B11939 /* CoreFoundation.framework */,
+				E4DC20681DF3369F00B11939 /* libSOIL.a */,
+				E4DC20561DF32D7A00B11939 /* libGLEW.a */,
+				E4DC20541DF32D4A00B11939 /* OpenGL.framework */,
+				E4DC20521DF30F6300B11939 /* libSDL2.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4DC20631DF32ED300B11939 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4C80B9C1DF61B7600152A19 /* awesomeface.png */,
+				E4DC20721DF487AB00B11939 /* container.jpg */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,7 +120,7 @@
 			buildPhases = (
 				E4DC20431DF30E2F00B11939 /* Sources */,
 				E4DC20441DF30E2F00B11939 /* Frameworks */,
-				E4DC20451DF30E2F00B11939 /* CopyFiles */,
+				E4DC20451DF30E2F00B11939 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -216,6 +265,13 @@
 		E4DC204F1DF30E2F00B11939 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.5/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +279,13 @@
 		E4DC20501DF30E2F00B11939 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.5/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -246,6 +309,7 @@
 				E4DC20501DF30E2F00B11939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
