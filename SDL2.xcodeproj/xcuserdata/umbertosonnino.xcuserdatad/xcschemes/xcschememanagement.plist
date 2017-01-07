@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SDL2 copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>SDL2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>E42719371E20FBFE00EB8F7A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E4DC20461DF30E2F00B11939</key>
 		<dict>
 			<key>primary</key>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E4DC20461DF30E2F00B11939"
-               BuildableName = "SDL2 Getting Started"
-               BlueprintName = "SDL2 Getting Started"
+               BlueprintIdentifier = "E42719371E20FBFE00EB8F7A"
+               BuildableName = "SDL2 Lighting"
+               BlueprintName = "SDL2 Lighting"
                ReferencedContainer = "container:SDL2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E4DC20461DF30E2F00B11939"
-            BuildableName = "SDL2 Getting Started"
-            BlueprintName = "SDL2 Getting Started"
+            BlueprintIdentifier = "E42719371E20FBFE00EB8F7A"
+            BuildableName = "SDL2 Lighting"
+            BlueprintName = "SDL2 Lighting"
             ReferencedContainer = "container:SDL2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -46,8 +46,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/umbertosonnino/Documents/XCode/SDL2/SDL2"
+      useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -56,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E4DC20461DF30E2F00B11939"
-            BuildableName = "SDL2 Getting Started"
-            BlueprintName = "SDL2 Getting Started"
+            BlueprintIdentifier = "E42719371E20FBFE00EB8F7A"
+            BuildableName = "SDL2 Lighting"
+            BlueprintName = "SDL2 Lighting"
             ReferencedContainer = "container:SDL2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E4DC20461DF30E2F00B11939"
-            BuildableName = "SDL2 Getting Started"
-            BlueprintName = "SDL2 Getting Started"
+            BlueprintIdentifier = "E42719371E20FBFE00EB8F7A"
+            BuildableName = "SDL2 Lighting"
+            BlueprintName = "SDL2 Lighting"
             ReferencedContainer = "container:SDL2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

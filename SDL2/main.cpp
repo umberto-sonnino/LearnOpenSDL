@@ -285,7 +285,6 @@ int main(int argc, const char * argv[]) {
         SDL_Event event;
         
         deltaTime = getDelta();
-        cout << deltaTime << endl;
         
         while(SDL_PollEvent(&event))
         {
