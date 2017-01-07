@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <chrono>
+#include <unistd.h>
 
 #include "Shader.h"
 #include "Camera.h"
@@ -255,7 +256,7 @@ int main(int argc, const char * argv[]) {
     
     glewExperimental = GL_TRUE;
     glewInit();
-    
+
     shader = new Shader("vertex.glsl", "fragment.glsl");
     init_data();
     
