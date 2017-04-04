@@ -7,73 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E42719391E20FBFE00EB8F7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4DC204A1DF30E2F00B11939 /* main.cpp */; };
-		E427193B1E20FBFE00EB8F7A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC206A1DF336F800B11939 /* CoreFoundation.framework */; };
-		E427193C1E20FBFE00EB8F7A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20541DF32D4A00B11939 /* OpenGL.framework */; };
-		E427193D1E20FBFE00EB8F7A /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20521DF30F6300B11939 /* libSDL2.a */; };
-		E427193E1E20FBFE00EB8F7A /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20681DF3369F00B11939 /* libSOIL.a */; };
-		E427193F1E20FBFE00EB8F7A /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20561DF32D7A00B11939 /* libGLEW.a */; };
-		E4DC204B1DF30E2F00B11939 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4DC204A1DF30E2F00B11939 /* main.cpp */; };
+		E42719551E21019E00EB8F7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4DC204A1DF30E2F00B11939 /* main.cpp */; };
+		E46B41461E22C25E0038B976 /* lightingFs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E46B41441E22C25E0038B976 /* lightingFs.glsl */; };
+		E46B41471E22C25E0038B976 /* lightingVs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E46B41451E22C25E0038B976 /* lightingVs.glsl */; };
 		E4DC20531DF30F6300B11939 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20521DF30F6300B11939 /* libSDL2.a */; };
 		E4DC20551DF32D4A00B11939 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20541DF32D4A00B11939 /* OpenGL.framework */; };
 		E4DC20571DF32D7A00B11939 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20561DF32D7A00B11939 /* libGLEW.a */; };
 		E4DC20691DF3369F00B11939 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20681DF3369F00B11939 /* libSOIL.a */; };
 		E4DC206B1DF336F800B11939 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC206A1DF336F800B11939 /* CoreFoundation.framework */; };
+		E4F7F7A41E21687800D269FB /* fragment.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A21E21687800D269FB /* fragment.glsl */; };
+		E4F7F7A51E21687800D269FB /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A31E21687800D269FB /* vertex.glsl */; };
+		E4F7F7A81E21689B00D269FB /* awesomeface.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A61E21689B00D269FB /* awesomeface.png */; };
+		E4F7F7A91E21689B00D269FB /* container.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A71E21689B00D269FB /* container.jpg */; };
+		E4F7F7AE1E2168DA00D269FB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC206A1DF336F800B11939 /* CoreFoundation.framework */; };
+		E4F7F7AF1E2168DA00D269FB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20541DF32D4A00B11939 /* OpenGL.framework */; };
+		E4F7F7B01E2168DA00D269FB /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20521DF30F6300B11939 /* libSDL2.a */; };
+		E4F7F7B11E2168DA00D269FB /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20681DF3369F00B11939 /* libSOIL.a */; };
+		E4F7F7B21E2168DA00D269FB /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20561DF32D7A00B11939 /* libGLEW.a */; };
+		E4F7F7B41E2168DA00D269FB /* awesomeface.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A61E21689B00D269FB /* awesomeface.png */; };
+		E4F7F7B51E2168DA00D269FB /* container.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A71E21689B00D269FB /* container.jpg */; };
+		E4F7F7B61E2168DA00D269FB /* fragment.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A21E21687800D269FB /* fragment.glsl */; };
+		E4F7F7B71E2168DA00D269FB /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A31E21687800D269FB /* vertex.glsl */; };
+		E4F7F7C51E2169EE00D269FB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F7F7C01E21692300D269FB /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E42719401E20FBFE00EB8F7A /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		E4DC20451DF30E2F00B11939 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				E4F7F7A81E21689B00D269FB /* awesomeface.png in Copy Files */,
+				E4F7F7A91E21689B00D269FB /* container.jpg in Copy Files */,
+				E4F7F7A41E21687800D269FB /* fragment.glsl in Copy Files */,
+				E4F7F7A51E21687800D269FB /* vertex.glsl in Copy Files */,
 			);
 			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F7F7B31E2168DA00D269FB /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				E46B41461E22C25E0038B976 /* lightingFs.glsl in Copy Files */,
+				E46B41471E22C25E0038B976 /* lightingVs.glsl in Copy Files */,
+				E4F7F7B41E2168DA00D269FB /* awesomeface.png in Copy Files */,
+				E4F7F7B51E2168DA00D269FB /* container.jpg in Copy Files */,
+				E4F7F7B61E2168DA00D269FB /* fragment.glsl in Copy Files */,
+				E4F7F7B71E2168DA00D269FB /* vertex.glsl in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E42719441E20FBFE00EB8F7A /* SDL2 Lighting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SDL2 Lighting"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E45AADF91E21652600B9AAE1 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.glsl; path = "Getting Started/vertex.glsl"; sourceTree = "<group>"; };
+		E45AADFA1E21654800B9AAE1 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fragment.glsl; path = "Getting Started/fragment.glsl"; sourceTree = "<group>"; };
+		E45AADFB1E21656F00B9AAE1 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = "Getting Started/Shader.h"; sourceTree = "<group>"; };
+		E46B41441E22C25E0038B976 /* lightingFs.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = lightingFs.glsl; path = SDL2/Lighting/lightingFs.glsl; sourceTree = "<group>"; };
+		E46B41451E22C25E0038B976 /* lightingVs.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = lightingVs.glsl; path = SDL2/Lighting/lightingVs.glsl; sourceTree = "<group>"; };
 		E4C80B9C1DF61B7600152A19 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = awesomeface.png; path = SDL2/awesomeface.png; sourceTree = "<group>"; };
-		E4C80B9D1DF977BB00152A19 /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
-		E4DC20471DF30E2F00B11939 /* SDL2 Getting Started */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SDL2 Getting Started"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4DC204A1DF30E2F00B11939 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E4DC20471DF30E2F00B11939 /* GettingStarted */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GettingStarted; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4DC204A1DF30E2F00B11939 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "Getting Started/main.cpp"; sourceTree = "<group>"; };
 		E4DC20521DF30F6300B11939 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = ../../../../../usr/local/Cellar/sdl2/2.0.5/lib/libSDL2.a; sourceTree = "<group>"; };
 		E4DC20541DF32D4A00B11939 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		E4DC20561DF32D7A00B11939 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.a; sourceTree = "<group>"; };
-		E4DC205D1DF32EC100B11939 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		E4DC205D1DF32EC100B11939 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = "Getting Started/Camera.h"; sourceTree = "<group>"; };
 		E4DC20681DF3369F00B11939 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSOIL.a; sourceTree = "<group>"; };
 		E4DC206A1DF336F800B11939 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		E4DC206C1DF3378900B11939 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.glsl; sourceTree = "<group>"; };
-		E4DC206D1DF3379C00B11939 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.glsl; sourceTree = "<group>"; };
 		E4DC20721DF487AB00B11939 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = container.jpg; path = SDL2/container.jpg; sourceTree = "<group>"; };
+		E4F7F7A21E21687800D269FB /* fragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = fragment.glsl; path = "SDL2/Getting Started/fragment.glsl"; sourceTree = "<group>"; };
+		E4F7F7A31E21687800D269FB /* vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vertex.glsl; path = "SDL2/Getting Started/vertex.glsl"; sourceTree = "<group>"; };
+		E4F7F7A61E21689B00D269FB /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = awesomeface.png; path = SDL2/awesomeface.png; sourceTree = "<group>"; };
+		E4F7F7A71E21689B00D269FB /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = container.jpg; path = SDL2/container.jpg; sourceTree = "<group>"; };
+		E4F7F7BB1E2168DA00D269FB /* Lighting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lighting; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4F7F7BD1E21692300D269FB /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Lighting/Camera.h; sourceTree = "<group>"; };
+		E4F7F7BF1E21692300D269FB /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fragment.glsl; path = Lighting/fragment.glsl; sourceTree = "<group>"; };
+		E4F7F7C01E21692300D269FB /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Lighting/main.cpp; sourceTree = "<group>"; };
+		E4F7F7C11E21692300D269FB /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = Lighting/Shader.h; sourceTree = "<group>"; };
+		E4F7F7C31E21692300D269FB /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.glsl; path = Lighting/vertex.glsl; sourceTree = "<group>"; };
+		E4F7F7C61E22639900D269FB /* lightingVs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lightingVs.glsl; path = Lighting/lightingVs.glsl; sourceTree = "<group>"; };
+		E4F7F7C71E2263CF00D269FB /* lightingFs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lightingFs.glsl; path = Lighting/lightingFs.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E427193A1E20FBFE00EB8F7A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E427193B1E20FBFE00EB8F7A /* CoreFoundation.framework in Frameworks */,
-				E427193C1E20FBFE00EB8F7A /* OpenGL.framework in Frameworks */,
-				E427193D1E20FBFE00EB8F7A /* libSDL2.a in Frameworks */,
-				E427193E1E20FBFE00EB8F7A /* libSOIL.a in Frameworks */,
-				E427193F1E20FBFE00EB8F7A /* libGLEW.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E4DC20441DF30E2F00B11939 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,12 +107,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4F7F7AD1E2168DA00D269FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F7F7AE1E2168DA00D269FB /* CoreFoundation.framework in Frameworks */,
+				E4F7F7AF1E2168DA00D269FB /* OpenGL.framework in Frameworks */,
+				E4F7F7B01E2168DA00D269FB /* libSDL2.a in Frameworks */,
+				E4F7F7B11E2168DA00D269FB /* libSOIL.a in Frameworks */,
+				E4F7F7B21E2168DA00D269FB /* libGLEW.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E45AADF81E21641100B9AAE1 /* Getting Started */ = {
+			isa = PBXGroup;
+			children = (
+				E4DC204A1DF30E2F00B11939 /* main.cpp */,
+				E45AADFB1E21656F00B9AAE1 /* Shader.h */,
+				E4DC205D1DF32EC100B11939 /* Camera.h */,
+				E45AADF91E21652600B9AAE1 /* vertex.glsl */,
+				E45AADFA1E21654800B9AAE1 /* fragment.glsl */,
+			);
+			name = "Getting Started";
+			sourceTree = "<group>";
+		};
 		E4DC203E1DF30E2F00B11939 = {
 			isa = PBXGroup;
 			children = (
+				E46B41441E22C25E0038B976 /* lightingFs.glsl */,
+				E46B41451E22C25E0038B976 /* lightingVs.glsl */,
+				E4F7F7A61E21689B00D269FB /* awesomeface.png */,
+				E4F7F7A71E21689B00D269FB /* container.jpg */,
+				E4F7F7A21E21687800D269FB /* fragment.glsl */,
+				E4F7F7A31E21687800D269FB /* vertex.glsl */,
 				E4DC20631DF32ED300B11939 /* Resources */,
 				E4DC20491DF30E2F00B11939 /* SDL2 */,
 				E4DC20481DF30E2F00B11939 /* Products */,
@@ -102,8 +153,8 @@
 		E4DC20481DF30E2F00B11939 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4DC20471DF30E2F00B11939 /* SDL2 Getting Started */,
-				E42719441E20FBFE00EB8F7A /* SDL2 Lighting */,
+				E4DC20471DF30E2F00B11939 /* GettingStarted */,
+				E4F7F7BB1E2168DA00D269FB /* Lighting */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,11 +162,8 @@
 		E4DC20491DF30E2F00B11939 /* SDL2 */ = {
 			isa = PBXGroup;
 			children = (
-				E4DC205D1DF32EC100B11939 /* Shader.h */,
-				E4DC204A1DF30E2F00B11939 /* main.cpp */,
-				E4DC206C1DF3378900B11939 /* vertex.glsl */,
-				E4DC206D1DF3379C00B11939 /* fragment.glsl */,
-				E4C80B9D1DF977BB00152A19 /* Camera.h */,
+				E45AADF81E21641100B9AAE1 /* Getting Started */,
+				E4F7F7BC1E2168EA00D269FB /* Lighting */,
 			);
 			path = SDL2;
 			sourceTree = "<group>";
@@ -141,29 +189,26 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		E4F7F7BC1E2168EA00D269FB /* Lighting */ = {
+			isa = PBXGroup;
+			children = (
+				E4F7F7C01E21692300D269FB /* main.cpp */,
+				E4F7F7BD1E21692300D269FB /* Camera.h */,
+				E4F7F7C11E21692300D269FB /* Shader.h */,
+				E4F7F7BF1E21692300D269FB /* fragment.glsl */,
+				E4F7F7C31E21692300D269FB /* vertex.glsl */,
+				E4F7F7C61E22639900D269FB /* lightingVs.glsl */,
+				E4F7F7C71E2263CF00D269FB /* lightingFs.glsl */,
+			);
+			name = Lighting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E42719371E20FBFE00EB8F7A /* SDL2 Lighting */ = {
+		E4DC20461DF30E2F00B11939 /* GettingStarted */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E42719411E20FBFE00EB8F7A /* Build configuration list for PBXNativeTarget "SDL2 Lighting" */;
-			buildPhases = (
-				E42719381E20FBFE00EB8F7A /* Sources */,
-				E427193A1E20FBFE00EB8F7A /* Frameworks */,
-				E42719401E20FBFE00EB8F7A /* Copy Files */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SDL2 Lighting";
-			productName = SDL2;
-			productReference = E42719441E20FBFE00EB8F7A /* SDL2 Lighting */;
-			productType = "com.apple.product-type.tool";
-		};
-		E4DC20461DF30E2F00B11939 /* SDL2 Getting Started */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4DC204E1DF30E2F00B11939 /* Build configuration list for PBXNativeTarget "SDL2 Getting Started" */;
+			buildConfigurationList = E4DC204E1DF30E2F00B11939 /* Build configuration list for PBXNativeTarget "GettingStarted" */;
 			buildPhases = (
 				E4DC20431DF30E2F00B11939 /* Sources */,
 				E4DC20441DF30E2F00B11939 /* Frameworks */,
@@ -173,9 +218,26 @@
 			);
 			dependencies = (
 			);
-			name = "SDL2 Getting Started";
+			name = GettingStarted;
 			productName = SDL2;
-			productReference = E4DC20471DF30E2F00B11939 /* SDL2 Getting Started */;
+			productReference = E4DC20471DF30E2F00B11939 /* GettingStarted */;
+			productType = "com.apple.product-type.tool";
+		};
+		E4F7F7AA1E2168DA00D269FB /* Lighting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F7F7B81E2168DA00D269FB /* Build configuration list for PBXNativeTarget "Lighting" */;
+			buildPhases = (
+				E4F7F7AB1E2168DA00D269FB /* Sources */,
+				E4F7F7AD1E2168DA00D269FB /* Frameworks */,
+				E4F7F7B31E2168DA00D269FB /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lighting;
+			productName = SDL2;
+			productReference = E4F7F7BB1E2168DA00D269FB /* Lighting */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -205,60 +267,32 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E4DC20461DF30E2F00B11939 /* SDL2 Getting Started */,
-				E42719371E20FBFE00EB8F7A /* SDL2 Lighting */,
+				E4DC20461DF30E2F00B11939 /* GettingStarted */,
+				E4F7F7AA1E2168DA00D269FB /* Lighting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E42719381E20FBFE00EB8F7A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E42719391E20FBFE00EB8F7A /* main.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E4DC20431DF30E2F00B11939 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4DC204B1DF30E2F00B11939 /* main.cpp in Sources */,
+				E42719551E21019E00EB8F7A /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4F7F7AB1E2168DA00D269FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4F7F7C51E2169EE00D269FB /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E42719421E20FBFE00EB8F7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/sdl2/2.0.5/lib,
-					/usr/local/Cellar/glew/2.0.0/lib,
-					"$(PROJECT_DIR)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		E42719431E20FBFE00EB8F7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/sdl2/2.0.5/lib,
-					/usr/local/Cellar/glew/2.0.0/lib,
-					"$(PROJECT_DIR)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		E4DC204C1DF30E2F00B11939 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -374,18 +408,37 @@
 			};
 			name = Release;
 		};
+		E4F7F7B91E2168DA00D269FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.5/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E4F7F7BA1E2168DA00D269FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.5/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E42719411E20FBFE00EB8F7A /* Build configuration list for PBXNativeTarget "SDL2 Lighting" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E42719421E20FBFE00EB8F7A /* Debug */,
-				E42719431E20FBFE00EB8F7A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E4DC20421DF30E2F00B11939 /* Build configuration list for PBXProject "SDL2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -395,11 +448,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4DC204E1DF30E2F00B11939 /* Build configuration list for PBXNativeTarget "SDL2 Getting Started" */ = {
+		E4DC204E1DF30E2F00B11939 /* Build configuration list for PBXNativeTarget "GettingStarted" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4DC204F1DF30E2F00B11939 /* Debug */,
 				E4DC20501DF30E2F00B11939 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4F7F7B81E2168DA00D269FB /* Build configuration list for PBXNativeTarget "Lighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F7F7B91E2168DA00D269FB /* Debug */,
+				E4F7F7BA1E2168DA00D269FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
