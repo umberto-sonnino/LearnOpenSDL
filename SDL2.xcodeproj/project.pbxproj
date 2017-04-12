@@ -10,6 +10,8 @@
 		E42719551E21019E00EB8F7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4DC204A1DF30E2F00B11939 /* main.cpp */; };
 		E46B41461E22C25E0038B976 /* lightingFs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E46B41441E22C25E0038B976 /* lightingFs.glsl */; };
 		E46B41471E22C25E0038B976 /* lightingVs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E46B41451E22C25E0038B976 /* lightingVs.glsl */; };
+		E4A13FAD1E9D885C00B495D8 /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7C31E21692300D269FB /* vertex.glsl */; };
+		E4A13FAE1E9D885C00B495D8 /* fragment.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7BF1E21692300D269FB /* fragment.glsl */; };
 		E4DC20531DF30F6300B11939 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20521DF30F6300B11939 /* libSDL2.a */; };
 		E4DC20551DF32D4A00B11939 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20541DF32D4A00B11939 /* OpenGL.framework */; };
 		E4DC20571DF32D7A00B11939 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20561DF32D7A00B11939 /* libGLEW.a */; };
@@ -26,8 +28,6 @@
 		E4F7F7B21E2168DA00D269FB /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20561DF32D7A00B11939 /* libGLEW.a */; };
 		E4F7F7B41E2168DA00D269FB /* awesomeface.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A61E21689B00D269FB /* awesomeface.png */; };
 		E4F7F7B51E2168DA00D269FB /* container.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A71E21689B00D269FB /* container.jpg */; };
-		E4F7F7B61E2168DA00D269FB /* fragment.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A21E21687800D269FB /* fragment.glsl */; };
-		E4F7F7B71E2168DA00D269FB /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A31E21687800D269FB /* vertex.glsl */; };
 		E4F7F7C51E2169EE00D269FB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F7F7C01E21692300D269FB /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -52,12 +52,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				E46B41461E22C25E0038B976 /* lightingFs.glsl in Copy Files */,
+				E4A13FAD1E9D885C00B495D8 /* vertex.glsl in Copy Files */,
+				E4A13FAE1E9D885C00B495D8 /* fragment.glsl in Copy Files */,
 				E46B41471E22C25E0038B976 /* lightingVs.glsl in Copy Files */,
+				E46B41461E22C25E0038B976 /* lightingFs.glsl in Copy Files */,
 				E4F7F7B41E2168DA00D269FB /* awesomeface.png in Copy Files */,
 				E4F7F7B51E2168DA00D269FB /* container.jpg in Copy Files */,
-				E4F7F7B61E2168DA00D269FB /* fragment.glsl in Copy Files */,
-				E4F7F7B71E2168DA00D269FB /* vertex.glsl in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,8 +195,8 @@
 				E4F7F7C01E21692300D269FB /* main.cpp */,
 				E4F7F7BD1E21692300D269FB /* Camera.h */,
 				E4F7F7C11E21692300D269FB /* Shader.h */,
-				E4F7F7BF1E21692300D269FB /* fragment.glsl */,
 				E4F7F7C31E21692300D269FB /* vertex.glsl */,
+				E4F7F7BF1E21692300D269FB /* fragment.glsl */,
 				E4F7F7C61E22639900D269FB /* lightingVs.glsl */,
 				E4F7F7C71E2263CF00D269FB /* lightingFs.glsl */,
 			);
