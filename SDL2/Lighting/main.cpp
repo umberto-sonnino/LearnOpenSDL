@@ -57,24 +57,24 @@ GLdouble getDelta()
     
     timeLast = timeNow;
     timeNow = SDL_GetPerformanceCounter();
-    deltaTime = GLdouble(timeNow - timeLast)*(10000) / GLdouble(frequency);
+    deltaTime = GLdouble(timeNow - timeLast)*(1000) / GLdouble(frequency);
     
     return deltaTime;
 }
 
-void do_movement()
+void do_movement(GLdouble delta)
 {
     if(keys[SDLK_w]){
-        camera.ProcessKeyboard(FORWARD, deltaTime);
+        camera.ProcessKeyboard(FORWARD, delta);
     }
     if(keys[SDLK_s]){
-        camera.ProcessKeyboard(BACKWARD, deltaTime);
+        camera.ProcessKeyboard(BACKWARD, delta);
     }
     if(keys[SDLK_a]){
-        camera.ProcessKeyboard(LEFT, deltaTime);
+        camera.ProcessKeyboard(LEFT, delta);
     }
     if(keys[SDLK_d]){
-        camera.ProcessKeyboard(RIGHT, deltaTime);
+        camera.ProcessKeyboard(RIGHT, delta);
     }
 }
 
@@ -100,24 +100,9 @@ bool handle_input(SDL_Event event)
 void scroll_callback(const double yoffset)
 {
     double invert = -yoffset;
-    invert  /= 10;
-//    cout << invert << endl;
+    invert  /= 50;
     
     camera.ProcessMouseScroll(invert);
-}
-
-// To be used with absolute coordinates
-void mouse_callback(double xpos, double ypos)
-{
-    GLfloat xoffset = xpos - lastX;
-    GLfloat yoffset = lastY - ypos;
-    lastX = xpos;
-    lastY = ypos;
-    
-    cout << "X: " << xpos << " Y: " << ypos << endl;
-    cout << "Xoff: " << xoffset << " Yoff: " << yoffset << endl;
-    
-    camera.ProcessMouseMovement(xoffset, yoffset);
 }
 
 void init_data()
@@ -241,12 +226,15 @@ int main(int argc, const char * argv[]) {
     SDL_SetRelativeMouseMode(SDL_TRUE);
     
     bool loop = true;
+    GLdouble colorFactor = 0.0;
     
     while(loop)
     {
         SDL_Event event;
         
-        deltaTime = getDelta();
+        timeLast = timeNow;
+        timeNow = SDL_GetPerformanceCounter();
+        deltaTime = GLdouble(timeNow - timeLast)*(1000) / GLdouble(SDL_GetPerformanceFrequency());
         
         while(SDL_PollEvent(&event))
         {
@@ -257,10 +245,9 @@ int main(int argc, const char * argv[]) {
                 case SDL_KEYDOWN:
                 case SDL_KEYUP:
                     loop = handle_input(event);
-                    do_movement();
+                    do_movement(deltaTime / 150);
                     break;
                 case SDL_MOUSEMOTION:
-//                    mouse_callback(event.motion.xrel, event.motion.yrel);
                     camera.ProcessMouseMovement(event.motion.xrel, -event.motion.yrel);
                     break;
                 case SDL_MOUSEWHEEL:
@@ -269,65 +256,73 @@ int main(int argc, const char * argv[]) {
                 default:
                     break;
             }
-            
-            if(event.type == SDL_QUIT)
-                loop = false;
-            else if( event.type == SDL_KEYDOWN || event.type == SDL_KEYUP )
-            {
-                loop = handle_input(event);
-                do_movement();
-            }
-            
-            glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-            glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
-            
-            // First "Bigger-Cube" Shader is activated
-            lightingShader->Use();
-            GLint objectColorLoc = glGetUniformLocation(lightingShader->Program, "objectColor");
-            GLint lightColorLoc = glGetUniformLocation(lightingShader->Program, "lightColor");
-            GLint lightPosLoc = glGetUniformLocation(lightingShader->Program, "lightPos");
-            glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f);
-            glUniform3f(lightColorLoc, 1.0f, 1.0f, 1.0f);
-            glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
-            
-            glm::mat4 view;
-            view = camera.GetViewMatrix();
-            glm::mat4 projection = glm::perspective(camera.Zoom, (GLfloat)WIDTH/(GLfloat)HEIGHT, 0.1f, 100.0f);
-            
-            GLint modelLoc = glGetUniformLocation(lightingShader->Program, "model");
-            GLint viewLoc = glGetUniformLocation(lightingShader->Program, "view");
-            GLint projLoc = glGetUniformLocation(lightingShader->Program, "projection");
-            
-            glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-            glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-            
-            glBindVertexArray(vao);
-            glm::mat4 model;
-            glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-            glDrawArrays(GL_TRIANGLES, 0, 36);
-            glBindVertexArray(0);
-            
-            // Other Shader is activated
-            shader->Use();
-            modelLoc = glGetUniformLocation(shader->Program, "model");
-            viewLoc = glGetUniformLocation(shader->Program, "view");
-            projLoc = glGetUniformLocation(shader->Program, "projection");
-            
-            glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-            glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-            
-            model = glm::mat4();
-            model = glm::translate(model, lightPos);
-            model = glm::scale(model, glm::vec3(0.2f)); // Smaller cube
-            glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-            
-            glBindVertexArray(lightVAO);
-            glDrawArrays(GL_TRIANGLES, 0, 36);
-            glBindVertexArray(0);
-            
-            SDL_GL_SwapWindow(win);
-            SDL_Delay(1000 / 60);
         }
+        
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+        
+        // First "Bigger-Cube" Shader is activated
+        lightingShader->Use();
+        
+        GLint lightPosLoc = glGetUniformLocation(lightingShader->Program, "light.position");
+        GLint viewPosLoc = glGetUniformLocation(lightingShader->Program, "viewPos");
+        glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
+        glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
+        
+        glm::vec3 lightColor;
+        colorFactor += 0.01;
+        lightColor.x = sin(colorFactor * 2.0f);
+        lightColor.y = sin(colorFactor * 0.7f);
+        lightColor.z = sin(colorFactor * 1.3f);
+        glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f);
+        glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f);
+        
+        glUniform3f(glGetUniformLocation(lightingShader->Program, "light.ambient"), ambientColor.x, ambientColor.y, ambientColor.z);
+        glUniform3f(glGetUniformLocation(lightingShader->Program, "light.diffuse"), diffuseColor.x, diffuseColor.y, diffuseColor.z);
+        glUniform3f(glGetUniformLocation(lightingShader->Program, "light.specular"), 1.0f, 1.0f, 1.0f);
+        
+        glUniform3f(glGetUniformLocation(lightingShader->Program, "material.ambient"), 1.0f, 0.5f, 0.31f);
+        glUniform3f(glGetUniformLocation(lightingShader->Program, "material.diffuse"), 1.0f, 0.5f, 0.31f);
+        glUniform3f(glGetUniformLocation(lightingShader->Program, "material.specular"), 0.5f, 0.5f, 0.5f);
+        glUniform1f(glGetUniformLocation(lightingShader->Program, "material.shininess"), 32.0f);
+        
+        glm::mat4 view;
+        view = camera.GetViewMatrix();
+        glm::mat4 projection = glm::perspective(camera.Zoom, (GLfloat)WIDTH/(GLfloat)HEIGHT, 0.1f, 100.0f);
+        
+        GLint modelLoc = glGetUniformLocation(lightingShader->Program, "model");
+        GLint viewLoc = glGetUniformLocation(lightingShader->Program, "view");
+        GLint projLoc = glGetUniformLocation(lightingShader->Program, "projection");
+        
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+        
+        glBindVertexArray(vao);
+        glm::mat4 model;
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glBindVertexArray(0);
+        
+        // Other Shader is activated
+        shader->Use();
+        modelLoc = glGetUniformLocation(shader->Program, "model");
+        viewLoc = glGetUniformLocation(shader->Program, "view");
+        projLoc = glGetUniformLocation(shader->Program, "projection");
+        
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+        
+        model = glm::mat4();
+        model = glm::translate(model, lightPos);
+        model = glm::scale(model, glm::vec3(0.2f)); // Smaller cube
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        
+        glBindVertexArray(lightVAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glBindVertexArray(0);
+        
+        SDL_GL_SwapWindow(win);
+        SDL_Delay(1000 / 60);
         
     }
     
