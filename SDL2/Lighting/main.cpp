@@ -26,7 +26,7 @@ using namespace std;
 
 SDL_Window *win;
 GLuint vao, lightVAO, vbo;
-GLuint diffuseMap;
+GLuint diffuseMap, specularMap;
 Shader *shader = nullptr;
 Shader *lightingShader = nullptr;
 
@@ -182,6 +182,7 @@ void init_data()
     
     // Handle Textures
     glGenTextures(1, &diffuseMap);
+    glGenTextures(1, &specularMap);
     int width, height;
     unsigned char* image;
     
@@ -194,10 +195,22 @@ void init_data()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST_MIPMAP_NEAREST);
-    glBindTexture(GL_TEXTURE_2D, 0);
     
+    // Specular Map
+    image = SOIL_load_image("container2_specular.png", &width, &height, 0, SOIL_LOAD_RGB);
+    glBindTexture(GL_TEXTURE_2D, specularMap);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
+    glGenerateMipmap(GL_TEXTURE_2D);
+    SOIL_free_image_data(image);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST_MIPMAP_NEAREST);
+    
+    glBindTexture(GL_TEXTURE_2D, 0);
     lightingShader->Use();
     glUniform1i(glGetUniformLocation(lightingShader->Program, "material.diffuse"), 0);
+    glUniform1i(glGetUniformLocation(lightingShader->Program, "material.specular"), 1);
 
 }
 
@@ -308,8 +321,10 @@ int main(int argc, const char * argv[]) {
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
         
-        glActiveTexture(GL_TEXTURE_2D);
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, diffuseMap);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, specularMap);
         
         glBindVertexArray(vao);
         glm::mat4 model;

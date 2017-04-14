@@ -18,6 +18,7 @@
 		E4DC20691DF3369F00B11939 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20681DF3369F00B11939 /* libSOIL.a */; };
 		E4DC206B1DF336F800B11939 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC206A1DF336F800B11939 /* CoreFoundation.framework */; };
 		E4DEE6991EA0DA9D006376AB /* container2.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4DEE6971EA0D4C6006376AB /* container2.png */; };
+		E4DEE69B1EA10DA4006376AB /* container2_specular.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4DEE69A1EA10D9C006376AB /* container2_specular.png */; };
 		E4F7F7A41E21687800D269FB /* fragment.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A21E21687800D269FB /* fragment.glsl */; };
 		E4F7F7A51E21687800D269FB /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A31E21687800D269FB /* vertex.glsl */; };
 		E4F7F7A81E21689B00D269FB /* awesomeface.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A61E21689B00D269FB /* awesomeface.png */; };
@@ -53,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				E4DEE69B1EA10DA4006376AB /* container2_specular.png in Copy Files */,
 				E4A13FAD1E9D885C00B495D8 /* vertex.glsl in Copy Files */,
 				E4A13FAE1E9D885C00B495D8 /* fragment.glsl in Copy Files */,
 				E46B41471E22C25E0038B976 /* lightingVs.glsl in Copy Files */,
@@ -83,6 +85,7 @@
 		E4DC206A1DF336F800B11939 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		E4DC20721DF487AB00B11939 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = container.jpg; path = SDL2/container.jpg; sourceTree = "<group>"; };
 		E4DEE6971EA0D4C6006376AB /* container2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2.png; sourceTree = "<group>"; };
+		E4DEE69A1EA10D9C006376AB /* container2_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = container2_specular.png; sourceTree = "<group>"; };
 		E4F7F7A21E21687800D269FB /* fragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = fragment.glsl; path = "SDL2/Getting Started/fragment.glsl"; sourceTree = "<group>"; };
 		E4F7F7A31E21687800D269FB /* vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; name = vertex.glsl; path = "SDL2/Getting Started/vertex.glsl"; sourceTree = "<group>"; };
 		E4F7F7A61E21689B00D269FB /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = awesomeface.png; path = SDL2/awesomeface.png; sourceTree = "<group>"; };
@@ -189,6 +192,7 @@
 				E4DEE6971EA0D4C6006376AB /* container2.png */,
 				E4C80B9C1DF61B7600152A19 /* awesomeface.png */,
 				E4DC20721DF487AB00B11939 /* container.jpg */,
+				E4DEE69A1EA10D9C006376AB /* container2_specular.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
