@@ -314,9 +314,13 @@ int main(int argc, const char * argv[]) {
         
 //        GLint lightDirLoc = glGetUniformLocation(lightingShader->Program, "light.direction");
         GLint lightPosLoc = glGetUniformLocation(lightingShader->Program, "light.position");
+        GLint lightSpotdirLoc = glGetUniformLocation(lightingShader->Program, "light.direction");
+        GLint lightSpotCutOffLoc = glGetUniformLocation(lightingShader->Program, "light.cutOff");
         GLint viewPosLoc = glGetUniformLocation(lightingShader->Program, "viewPos");
 //        glUniform3f(lightDirLoc, -1.f, -1.0f, -0.3f);
-        glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
+        glUniform3f(lightPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
+        glUniform3f(lightSpotdirLoc, camera.Front.x, camera.Front.y, camera.Front.z);
+        glUniform1f(lightSpotCutOffLoc, glm::cos(glm::radians(12.5f)));
         glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
         
         glUniform3f(glGetUniformLocation(lightingShader->Program, "light.ambient"), 0.2f, 0.2f, 0.2f);
