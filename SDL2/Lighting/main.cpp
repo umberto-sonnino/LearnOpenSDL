@@ -312,14 +312,19 @@ int main(int argc, const char * argv[]) {
         // First "Bigger-Cube" Shader is activated
         lightingShader->Use();
         
-        GLint lightDirLoc = glGetUniformLocation(lightingShader->Program, "light.direction");
+//        GLint lightDirLoc = glGetUniformLocation(lightingShader->Program, "light.direction");
+        GLint lightPosLoc = glGetUniformLocation(lightingShader->Program, "light.position");
         GLint viewPosLoc = glGetUniformLocation(lightingShader->Program, "viewPos");
-        glUniform3f(lightDirLoc, -1.f, -1.0f, -0.3f);
+//        glUniform3f(lightDirLoc, -1.f, -1.0f, -0.3f);
+        glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
         glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
         
         glUniform3f(glGetUniformLocation(lightingShader->Program, "light.ambient"), 0.2f, 0.2f, 0.2f);
         glUniform3f(glGetUniformLocation(lightingShader->Program, "light.diffuse"), 0.5f, 0.5f, 0.5f);
         glUniform3f(glGetUniformLocation(lightingShader->Program, "light.specular"), 1.0f, 1.0f, 1.0f);
+        glUniform1f(glGetUniformLocation(lightingShader->Program, "light.constant"), 1.0f);
+        glUniform1f(glGetUniformLocation(lightingShader->Program, "light.linear"), 0.09f);
+        glUniform1f(glGetUniformLocation(lightingShader->Program, "light.quadratic"), 0.032f);
         
         glUniform1f(glGetUniformLocation(lightingShader->Program, "material.shininess"), 64.0f);
         
@@ -355,22 +360,22 @@ int main(int argc, const char * argv[]) {
         glBindVertexArray(0);
         
         // Lamp Object Shader is activated
-//        shader->Use();
-//        modelLoc = glGetUniformLocation(shader->Program, "model");
-//        viewLoc = glGetUniformLocation(shader->Program, "view");
-//        projLoc = glGetUniformLocation(shader->Program, "projection");
-//        
-//        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-//        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-//        
-//        model = glm::mat4();
-//        model = glm::translate(model, lightPos);
-//        model = glm::scale(model, glm::vec3(0.2f)); // Smaller cube
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        
-//        glBindVertexArray(lightVAO);
-//        glDrawArrays(GL_TRIANGLES, 0, 36);
-//        glBindVertexArray(0);
+        shader->Use();
+        modelLoc = glGetUniformLocation(shader->Program, "model");
+        viewLoc = glGetUniformLocation(shader->Program, "view");
+        projLoc = glGetUniformLocation(shader->Program, "projection");
+        
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+        
+        model = glm::mat4();
+        model = glm::translate(model, lightPos);
+        model = glm::scale(model, glm::vec3(0.2f)); // Smaller cube
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        
+        glBindVertexArray(lightVAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glBindVertexArray(0);
         
         SDL_GL_SwapWindow(win);
         SDL_Delay(1000 / 60);
