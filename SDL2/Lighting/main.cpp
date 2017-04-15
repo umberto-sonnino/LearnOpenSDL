@@ -154,7 +154,7 @@ void init_data()
         -0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  0.0f,
         -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f
     };
-
+    
     glGenVertexArrays(1, &vao);
     glGenBuffers(1, &vbo);
     
@@ -260,6 +260,20 @@ int main(int argc, const char * argv[]) {
     // Trap mouse inside the window
     SDL_SetRelativeMouseMode(SDL_TRUE);
     
+    glm::vec3 cubePositions[] = {
+        glm::vec3( 0.0f,  0.0f,  0.0f),
+        glm::vec3( 2.0f,  5.0f, -15.0f),
+        glm::vec3(-1.5f, -2.2f, -2.5f),
+        glm::vec3(-3.8f, -2.0f, -12.3f),
+        glm::vec3( 2.4f, -0.4f, -3.5f),
+        glm::vec3(-1.7f,  3.0f, -7.5f),
+        glm::vec3( 1.3f, -2.0f, -2.5f),
+        glm::vec3( 1.5f,  2.0f, -2.5f),
+        glm::vec3( 1.5f,  0.2f, -1.5f),
+        glm::vec3(-1.3f,  1.0f, -1.5f)
+    };
+    
+    
     bool loop = true;
     
     while(loop)
@@ -298,16 +312,15 @@ int main(int argc, const char * argv[]) {
         // First "Bigger-Cube" Shader is activated
         lightingShader->Use();
         
-        GLint lightPosLoc = glGetUniformLocation(lightingShader->Program, "light.position");
+        GLint lightDirLoc = glGetUniformLocation(lightingShader->Program, "light.direction");
         GLint viewPosLoc = glGetUniformLocation(lightingShader->Program, "viewPos");
-        glUniform3f(lightPosLoc, lightPos.x, lightPos.y, lightPos.z);
+        glUniform3f(lightDirLoc, -1.f, -1.0f, -0.3f);
         glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
         
         glUniform3f(glGetUniformLocation(lightingShader->Program, "light.ambient"), 0.2f, 0.2f, 0.2f);
         glUniform3f(glGetUniformLocation(lightingShader->Program, "light.diffuse"), 0.5f, 0.5f, 0.5f);
         glUniform3f(glGetUniformLocation(lightingShader->Program, "light.specular"), 1.0f, 1.0f, 1.0f);
         
-        glUniform3f(glGetUniformLocation(lightingShader->Program, "material.specular"), 0.5f, 0.5f, 0.5f);
         glUniform1f(glGetUniformLocation(lightingShader->Program, "material.shininess"), 64.0f);
         
         glm::mat4 view;
@@ -328,27 +341,36 @@ int main(int argc, const char * argv[]) {
         
         glBindVertexArray(vao);
         glm::mat4 model;
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        
+        for(GLint i = 0; i < 10; ++i)
+        {
+            model = glm::mat4();
+            model = glm::translate(model, cubePositions[i]);
+            GLfloat angle = 20.0f * i;
+            model = glm::rotate(model, angle, glm::vec3(1.0f, 0.3f, 0.5f));
+            glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
+        
         glBindVertexArray(0);
         
-        // Other Shader is activated
-        shader->Use();
-        modelLoc = glGetUniformLocation(shader->Program, "model");
-        viewLoc = glGetUniformLocation(shader->Program, "view");
-        projLoc = glGetUniformLocation(shader->Program, "projection");
-        
-        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-        
-        model = glm::mat4();
-        model = glm::translate(model, lightPos);
-        model = glm::scale(model, glm::vec3(0.2f)); // Smaller cube
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        
-        glBindVertexArray(lightVAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
+        // Lamp Object Shader is activated
+//        shader->Use();
+//        modelLoc = glGetUniformLocation(shader->Program, "model");
+//        viewLoc = glGetUniformLocation(shader->Program, "view");
+//        projLoc = glGetUniformLocation(shader->Program, "projection");
+//        
+//        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+//        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+//        
+//        model = glm::mat4();
+//        model = glm::translate(model, lightPos);
+//        model = glm::scale(model, glm::vec3(0.2f)); // Smaller cube
+//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+//        
+//        glBindVertexArray(lightVAO);
+//        glDrawArrays(GL_TRIANGLES, 0, 36);
+//        glBindVertexArray(0);
         
         SDL_GL_SwapWindow(win);
         SDL_Delay(1000 / 60);
