@@ -8,6 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		E42719551E21019E00EB8F7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4DC204A1DF30E2F00B11939 /* main.cpp */; };
+		E45324DB1EAE584A007D00B4 /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E45324D41EAE5763007D00B4 /* libassimp.3.3.1.dylib */; };
+		E45324DC1EAE584A007D00B4 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC206A1DF336F800B11939 /* CoreFoundation.framework */; };
+		E45324DD1EAE584A007D00B4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20541DF32D4A00B11939 /* OpenGL.framework */; };
+		E45324DE1EAE584A007D00B4 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20521DF30F6300B11939 /* libSDL2.a */; };
+		E45324DF1EAE584A007D00B4 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20681DF3369F00B11939 /* libSOIL.a */; };
+		E45324E01EAE584A007D00B4 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20561DF32D7A00B11939 /* libGLEW.a */; };
+		E45324E21EAE584A007D00B4 /* container2_specular.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4DEE69A1EA10D9C006376AB /* container2_specular.png */; };
+		E45324E71EAE584A007D00B4 /* awesomeface.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A61E21689B00D269FB /* awesomeface.png */; };
+		E45324E81EAE584A007D00B4 /* container.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A71E21689B00D269FB /* container.jpg */; };
+		E45324E91EAE584A007D00B4 /* container2.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4DEE6971EA0D4C6006376AB /* container2.png */; };
+		E45324F51EAE5865007D00B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E45324F21EAE5865007D00B4 /* main.cpp */; };
+		E45324F61EAE587B007D00B4 /* fragment.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324EF1EAE5865007D00B4 /* fragment.glsl */; };
+		E45324F71EAE587B007D00B4 /* lightingFs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324F01EAE5865007D00B4 /* lightingFs.glsl */; };
+		E45324F81EAE587B007D00B4 /* lightingVs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324F11EAE5865007D00B4 /* lightingVs.glsl */; };
+		E45324F91EAE587B007D00B4 /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324F41EAE5865007D00B4 /* vertex.glsl */; };
 		E46B41461E22C25E0038B976 /* lightingFs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E46B41441E22C25E0038B976 /* lightingFs.glsl */; };
 		E46B41471E22C25E0038B976 /* lightingVs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E46B41451E22C25E0038B976 /* lightingVs.glsl */; };
 		E4A13FAD1E9D885C00B495D8 /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7C31E21692300D269FB /* vertex.glsl */; };
@@ -34,6 +49,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		E45324E11EAE584A007D00B4 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				E45324F61EAE587B007D00B4 /* fragment.glsl in Copy Files */,
+				E45324F71EAE587B007D00B4 /* lightingFs.glsl in Copy Files */,
+				E45324F81EAE587B007D00B4 /* lightingVs.glsl in Copy Files */,
+				E45324F91EAE587B007D00B4 /* vertex.glsl in Copy Files */,
+				E45324E21EAE584A007D00B4 /* container2_specular.png in Copy Files */,
+				E45324E71EAE584A007D00B4 /* awesomeface.png in Copy Files */,
+				E45324E81EAE584A007D00B4 /* container.jpg in Copy Files */,
+				E45324E91EAE584A007D00B4 /* container2.png in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4DC20451DF30E2F00B11939 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -69,6 +102,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E45324D41EAE5763007D00B4 /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = "../../../Downloads/assimp-3.3.1/lib/libassimp.3.3.1.dylib"; sourceTree = "<group>"; };
+		E45324ED1EAE584A007D00B4 /* Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Model; sourceTree = BUILT_PRODUCTS_DIR; };
+		E45324EE1EAE5865007D00B4 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Model/Camera.h; sourceTree = "<group>"; };
+		E45324EF1EAE5865007D00B4 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fragment.glsl; path = Model/fragment.glsl; sourceTree = "<group>"; };
+		E45324F01EAE5865007D00B4 /* lightingFs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lightingFs.glsl; path = Model/lightingFs.glsl; sourceTree = "<group>"; };
+		E45324F11EAE5865007D00B4 /* lightingVs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lightingVs.glsl; path = Model/lightingVs.glsl; sourceTree = "<group>"; };
+		E45324F21EAE5865007D00B4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Model/main.cpp; sourceTree = "<group>"; };
+		E45324F31EAE5865007D00B4 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = Model/Shader.h; sourceTree = "<group>"; };
+		E45324F41EAE5865007D00B4 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.glsl; path = Model/vertex.glsl; sourceTree = "<group>"; };
 		E45AADF91E21652600B9AAE1 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.glsl; path = "Getting Started/vertex.glsl"; sourceTree = "<group>"; };
 		E45AADFA1E21654800B9AAE1 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fragment.glsl; path = "Getting Started/fragment.glsl"; sourceTree = "<group>"; };
 		E45AADFB1E21656F00B9AAE1 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = "Getting Started/Shader.h"; sourceTree = "<group>"; };
@@ -101,6 +143,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E45324DA1EAE584A007D00B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E45324DB1EAE584A007D00B4 /* libassimp.3.3.1.dylib in Frameworks */,
+				E45324DC1EAE584A007D00B4 /* CoreFoundation.framework in Frameworks */,
+				E45324DD1EAE584A007D00B4 /* OpenGL.framework in Frameworks */,
+				E45324DE1EAE584A007D00B4 /* libSDL2.a in Frameworks */,
+				E45324DF1EAE584A007D00B4 /* libSOIL.a in Frameworks */,
+				E45324E01EAE584A007D00B4 /* libGLEW.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4DC20441DF30E2F00B11939 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +183,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E45324D61EAE57EB007D00B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E45324F21EAE5865007D00B4 /* main.cpp */,
+				E45324EE1EAE5865007D00B4 /* Camera.h */,
+				E45324EF1EAE5865007D00B4 /* fragment.glsl */,
+				E45324F01EAE5865007D00B4 /* lightingFs.glsl */,
+				E45324F11EAE5865007D00B4 /* lightingVs.glsl */,
+				E45324F31EAE5865007D00B4 /* Shader.h */,
+				E45324F41EAE5865007D00B4 /* vertex.glsl */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E45AADF81E21641100B9AAE1 /* Getting Started */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +230,7 @@
 			children = (
 				E4DC20471DF30E2F00B11939 /* GettingStarted */,
 				E4F7F7BB1E2168DA00D269FB /* Lighting */,
+				E45324ED1EAE584A007D00B4 /* Model */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +240,7 @@
 			children = (
 				E45AADF81E21641100B9AAE1 /* Getting Started */,
 				E4F7F7BC1E2168EA00D269FB /* Lighting */,
+				E45324D61EAE57EB007D00B4 /* Model */,
 			);
 			path = SDL2;
 			sourceTree = "<group>";
@@ -177,6 +248,7 @@
 		E4DC20511DF30F6300B11939 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E45324D41EAE5763007D00B4 /* libassimp.3.3.1.dylib */,
 				E4DC206A1DF336F800B11939 /* CoreFoundation.framework */,
 				E4DC20681DF3369F00B11939 /* libSOIL.a */,
 				E4DC20561DF32D7A00B11939 /* libGLEW.a */,
@@ -214,6 +286,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E45324D71EAE584A007D00B4 /* Model */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E45324EA1EAE584A007D00B4 /* Build configuration list for PBXNativeTarget "Model" */;
+			buildPhases = (
+				E45324D81EAE584A007D00B4 /* Sources */,
+				E45324DA1EAE584A007D00B4 /* Frameworks */,
+				E45324E11EAE584A007D00B4 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Model;
+			productName = SDL2;
+			productReference = E45324ED1EAE584A007D00B4 /* Model */;
+			productType = "com.apple.product-type.tool";
+		};
 		E4DC20461DF30E2F00B11939 /* GettingStarted */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4DC204E1DF30E2F00B11939 /* Build configuration list for PBXNativeTarget "GettingStarted" */;
@@ -277,11 +366,20 @@
 			targets = (
 				E4DC20461DF30E2F00B11939 /* GettingStarted */,
 				E4F7F7AA1E2168DA00D269FB /* Lighting */,
+				E45324D71EAE584A007D00B4 /* Model */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E45324D81EAE584A007D00B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E45324F51EAE5865007D00B4 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4DC20431DF30E2F00B11939 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +399,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		E45324EB1EAE584A007D00B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.5/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E45324EC1EAE584A007D00B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.5/lib,
+					/usr/local/Cellar/glew/2.0.0/lib,
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E4DC204C1DF30E2F00B11939 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,6 +573,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E45324EA1EAE584A007D00B4 /* Build configuration list for PBXNativeTarget "Model" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E45324EB1EAE584A007D00B4 /* Debug */,
+				E45324EC1EAE584A007D00B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E4DC20421DF30E2F00B11939 /* Build configuration list for PBXProject "SDL2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
