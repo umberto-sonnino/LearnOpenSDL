@@ -18,6 +18,7 @@
 
 #include "Shader.h"
 #include "Camera.h"
+#include "Mesh.hpp"
 
 using namespace std;
 

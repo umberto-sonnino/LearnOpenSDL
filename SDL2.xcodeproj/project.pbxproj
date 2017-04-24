@@ -111,6 +111,7 @@
 		E45324F21EAE5865007D00B4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Model/main.cpp; sourceTree = "<group>"; };
 		E45324F31EAE5865007D00B4 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = Model/Shader.h; sourceTree = "<group>"; };
 		E45324F41EAE5865007D00B4 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.glsl; path = Model/vertex.glsl; sourceTree = "<group>"; };
+		E45324FA1EAE5B91007D00B4 /* Mesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Mesh.hpp; path = Model/Mesh.hpp; sourceTree = "<group>"; };
 		E45AADF91E21652600B9AAE1 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.glsl; path = "Getting Started/vertex.glsl"; sourceTree = "<group>"; };
 		E45AADFA1E21654800B9AAE1 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fragment.glsl; path = "Getting Started/fragment.glsl"; sourceTree = "<group>"; };
 		E45AADFB1E21656F00B9AAE1 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = "Getting Started/Shader.h"; sourceTree = "<group>"; };
@@ -193,6 +194,7 @@
 				E45324F11EAE5865007D00B4 /* lightingVs.glsl */,
 				E45324F31EAE5865007D00B4 /* Shader.h */,
 				E45324F41EAE5865007D00B4 /* vertex.glsl */,
+				E45324FA1EAE5B91007D00B4 /* Mesh.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
