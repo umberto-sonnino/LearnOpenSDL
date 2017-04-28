@@ -102,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E402A4281EB36C84005339BF /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = Model/Model.h; sourceTree = "<group>"; };
 		E45324D41EAE5763007D00B4 /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = "../../../Downloads/assimp-3.3.1/lib/libassimp.3.3.1.dylib"; sourceTree = "<group>"; };
 		E45324ED1EAE584A007D00B4 /* Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Model; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45324EE1EAE5865007D00B4 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Model/Camera.h; sourceTree = "<group>"; };
@@ -195,6 +196,7 @@
 				E45324F31EAE5865007D00B4 /* Shader.h */,
 				E45324F41EAE5865007D00B4 /* vertex.glsl */,
 				E45324FA1EAE5B91007D00B4 /* Mesh.hpp */,
+				E402A4281EB36C84005339BF /* Model.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
