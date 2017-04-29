@@ -48,6 +48,7 @@ public:
     }
 private:
     vector<Mesh> meshes;
+    vector<Texture> textures_loaded;
     string directory;
     
     void loadModel (string path)
@@ -57,7 +58,7 @@ private:
         const aiScene* scene = import.ReadFile (path, aiProcess_Triangulate | aiProcess_FlipUVs);
         
         if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
-        {
+        {            
             cout << "ERROR:ASSIMP::" << import.GetErrorString() << endl;
             
             return;
@@ -133,10 +134,10 @@ private:
         if(mesh->mMaterialIndex >= 0)
         {
             aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
-            vector<Texture> diffuseMaps = this->loadMaterialTexture (material, aiTextureType_DIFFUSE, "texture_diffuse");
+            vector<Texture> diffuseMaps = this->loadMaterialTextures (material, aiTextureType_DIFFUSE, "texture_diffuse");
             textures.insert (textures.end(), diffuseMaps.begin(), diffuseMaps.end());
             
-            vector<Texture> specularMaps = this->loadMaterialTexture (material, aiTextureType_SPECULAR, "texture_specular");
+            vector<Texture> specularMaps = this->loadMaterialTextures (material, aiTextureType_SPECULAR, "texture_specular");
             textures.insert (textures.end(), specularMaps.begin(), specularMaps.end());
         }
         
@@ -144,19 +145,38 @@ private:
         
     }
     
-    vector<Texture> loadMaterialTexture (aiMaterial* mat, aiTextureType type, string typeName)
+    vector<Texture> loadMaterialTextures (aiMaterial* mat, aiTextureType type, string typeName)
     {
         vector<Texture> textures;
         for (GLuint i = 0; i < mat->GetTextureCount(type); i++)
         {
             aiString str;
             mat->GetTexture (type, i, &str);
-            Texture texture;
-            texture.id = TextureFromFile (str.C_Str(), this->directory);
-            texture.type = typeName;
-            texture.path = str;
-            textures.push_back (texture);
+            GLboolean skip = false;
+            
+            for (GLuint j = 0; j < textures_loaded.size(); j++)
+            {
+                if (std::strcmp (textures_loaded[j].path.C_Str(), str.C_Str()) == 0)
+                {
+                    textures.push_back (textures_loaded[j]);
+                    skip = true;
+                    break;
+                }
+            }
+            
+            if (!skip)
+            {
+                Texture texture;
+                
+                texture.id = TextureFromFile (str.C_Str(), this->directory);
+                texture.type = typeName;
+                texture.path = str;
+                textures.push_back (texture);
+                this->textures_loaded.push_back (texture);
+            }
         }
+        
+        return textures;
     }
 };
 

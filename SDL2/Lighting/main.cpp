@@ -462,6 +462,8 @@ int main(int argc, const char * argv[]) {
     SDL_DestroyWindow(win);
     SDL_Quit();
     
+    delete shader;
+    delete lightingShader;
     
     return 0;
 }

@@ -11,9 +11,12 @@
 #pragma once
 
 #include "Shader.h"
+
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <assimp/types.h>
+
 #include <string>
 #include <fstream>
 #include <sstream>

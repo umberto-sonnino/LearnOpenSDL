@@ -7,22 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E402A42A1EB50664005339BF /* nanosuit in Copy Files */ = {isa = PBXBuildFile; fileRef = E402A4291EB50639005339BF /* nanosuit */; };
+		E416BCB81EB50D92008522A0 /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E416BCB71EB50D92008522A0 /* libassimp.3.3.1.dylib */; };
 		E42719551E21019E00EB8F7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4DC204A1DF30E2F00B11939 /* main.cpp */; };
-		E45324DB1EAE584A007D00B4 /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E45324D41EAE5763007D00B4 /* libassimp.3.3.1.dylib */; };
 		E45324DC1EAE584A007D00B4 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC206A1DF336F800B11939 /* CoreFoundation.framework */; };
 		E45324DD1EAE584A007D00B4 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20541DF32D4A00B11939 /* OpenGL.framework */; };
 		E45324DE1EAE584A007D00B4 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20521DF30F6300B11939 /* libSDL2.a */; };
 		E45324DF1EAE584A007D00B4 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20681DF3369F00B11939 /* libSOIL.a */; };
 		E45324E01EAE584A007D00B4 /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DC20561DF32D7A00B11939 /* libGLEW.a */; };
-		E45324E21EAE584A007D00B4 /* container2_specular.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4DEE69A1EA10D9C006376AB /* container2_specular.png */; };
-		E45324E71EAE584A007D00B4 /* awesomeface.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A61E21689B00D269FB /* awesomeface.png */; };
-		E45324E81EAE584A007D00B4 /* container.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7A71E21689B00D269FB /* container.jpg */; };
-		E45324E91EAE584A007D00B4 /* container2.png in Copy Files */ = {isa = PBXBuildFile; fileRef = E4DEE6971EA0D4C6006376AB /* container2.png */; };
 		E45324F51EAE5865007D00B4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E45324F21EAE5865007D00B4 /* main.cpp */; };
-		E45324F61EAE587B007D00B4 /* fragment.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324EF1EAE5865007D00B4 /* fragment.glsl */; };
-		E45324F71EAE587B007D00B4 /* lightingFs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324F01EAE5865007D00B4 /* lightingFs.glsl */; };
-		E45324F81EAE587B007D00B4 /* lightingVs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324F11EAE5865007D00B4 /* lightingVs.glsl */; };
-		E45324F91EAE587B007D00B4 /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324F41EAE5865007D00B4 /* vertex.glsl */; };
+		E45324F71EAE587B007D00B4 /* model_loading.frag in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324F01EAE5865007D00B4 /* model_loading.frag */; };
+		E45324F81EAE587B007D00B4 /* model_loading.vs in Copy Files */ = {isa = PBXBuildFile; fileRef = E45324F11EAE5865007D00B4 /* model_loading.vs */; };
 		E46B41461E22C25E0038B976 /* lightingFs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E46B41441E22C25E0038B976 /* lightingFs.glsl */; };
 		E46B41471E22C25E0038B976 /* lightingVs.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E46B41451E22C25E0038B976 /* lightingVs.glsl */; };
 		E4A13FAD1E9D885C00B495D8 /* vertex.glsl in Copy Files */ = {isa = PBXBuildFile; fileRef = E4F7F7C31E21692300D269FB /* vertex.glsl */; };
@@ -55,14 +50,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				E45324F61EAE587B007D00B4 /* fragment.glsl in Copy Files */,
-				E45324F71EAE587B007D00B4 /* lightingFs.glsl in Copy Files */,
-				E45324F81EAE587B007D00B4 /* lightingVs.glsl in Copy Files */,
-				E45324F91EAE587B007D00B4 /* vertex.glsl in Copy Files */,
-				E45324E21EAE584A007D00B4 /* container2_specular.png in Copy Files */,
-				E45324E71EAE584A007D00B4 /* awesomeface.png in Copy Files */,
-				E45324E81EAE584A007D00B4 /* container.jpg in Copy Files */,
-				E45324E91EAE584A007D00B4 /* container2.png in Copy Files */,
+				E402A42A1EB50664005339BF /* nanosuit in Copy Files */,
+				E45324F71EAE587B007D00B4 /* model_loading.frag in Copy Files */,
+				E45324F81EAE587B007D00B4 /* model_loading.vs in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,15 +93,15 @@
 
 /* Begin PBXFileReference section */
 		E402A4281EB36C84005339BF /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = Model/Model.h; sourceTree = "<group>"; };
+		E402A4291EB50639005339BF /* nanosuit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nanosuit; sourceTree = "<group>"; };
+		E416BCB71EB50D92008522A0 /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = ../../../../../usr/local/Cellar/assimp/3.3.1/lib/libassimp.3.3.1.dylib; sourceTree = "<group>"; };
 		E45324D41EAE5763007D00B4 /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = "../../../Downloads/assimp-3.3.1/lib/libassimp.3.3.1.dylib"; sourceTree = "<group>"; };
 		E45324ED1EAE584A007D00B4 /* Model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Model; sourceTree = BUILT_PRODUCTS_DIR; };
 		E45324EE1EAE5865007D00B4 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Model/Camera.h; sourceTree = "<group>"; };
-		E45324EF1EAE5865007D00B4 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fragment.glsl; path = Model/fragment.glsl; sourceTree = "<group>"; };
-		E45324F01EAE5865007D00B4 /* lightingFs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lightingFs.glsl; path = Model/lightingFs.glsl; sourceTree = "<group>"; };
-		E45324F11EAE5865007D00B4 /* lightingVs.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = lightingVs.glsl; path = Model/lightingVs.glsl; sourceTree = "<group>"; };
+		E45324F01EAE5865007D00B4 /* model_loading.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = model_loading.frag; path = Model/model_loading.frag; sourceTree = "<group>"; };
+		E45324F11EAE5865007D00B4 /* model_loading.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = model_loading.vs; path = Model/model_loading.vs; sourceTree = "<group>"; };
 		E45324F21EAE5865007D00B4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Model/main.cpp; sourceTree = "<group>"; };
 		E45324F31EAE5865007D00B4 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = Model/Shader.h; sourceTree = "<group>"; };
-		E45324F41EAE5865007D00B4 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.glsl; path = Model/vertex.glsl; sourceTree = "<group>"; };
 		E45324FA1EAE5B91007D00B4 /* Mesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Mesh.hpp; path = Model/Mesh.hpp; sourceTree = "<group>"; };
 		E45AADF91E21652600B9AAE1 /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = vertex.glsl; path = "Getting Started/vertex.glsl"; sourceTree = "<group>"; };
 		E45AADFA1E21654800B9AAE1 /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fragment.glsl; path = "Getting Started/fragment.glsl"; sourceTree = "<group>"; };
@@ -149,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E45324DB1EAE584A007D00B4 /* libassimp.3.3.1.dylib in Frameworks */,
+				E416BCB81EB50D92008522A0 /* libassimp.3.3.1.dylib in Frameworks */,
 				E45324DC1EAE584A007D00B4 /* CoreFoundation.framework in Frameworks */,
 				E45324DD1EAE584A007D00B4 /* OpenGL.framework in Frameworks */,
 				E45324DE1EAE584A007D00B4 /* libSDL2.a in Frameworks */,
@@ -190,11 +180,9 @@
 			children = (
 				E45324F21EAE5865007D00B4 /* main.cpp */,
 				E45324EE1EAE5865007D00B4 /* Camera.h */,
-				E45324EF1EAE5865007D00B4 /* fragment.glsl */,
-				E45324F01EAE5865007D00B4 /* lightingFs.glsl */,
-				E45324F11EAE5865007D00B4 /* lightingVs.glsl */,
+				E45324F01EAE5865007D00B4 /* model_loading.frag */,
+				E45324F11EAE5865007D00B4 /* model_loading.vs */,
 				E45324F31EAE5865007D00B4 /* Shader.h */,
-				E45324F41EAE5865007D00B4 /* vertex.glsl */,
 				E45324FA1EAE5B91007D00B4 /* Mesh.hpp */,
 				E402A4281EB36C84005339BF /* Model.h */,
 			);
@@ -252,6 +240,7 @@
 		E4DC20511DF30F6300B11939 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E416BCB71EB50D92008522A0 /* libassimp.3.3.1.dylib */,
 				E45324D41EAE5763007D00B4 /* libassimp.3.3.1.dylib */,
 				E4DC206A1DF336F800B11939 /* CoreFoundation.framework */,
 				E4DC20681DF3369F00B11939 /* libSOIL.a */,
@@ -265,6 +254,7 @@
 		E4DC20631DF32ED300B11939 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E402A4291EB50639005339BF /* nanosuit */,
 				E4DEE6971EA0D4C6006376AB /* container2.png */,
 				E4C80B9C1DF61B7600152A19 /* awesomeface.png */,
 				E4DC20721DF487AB00B11939 /* container.jpg */,
@@ -347,7 +337,7 @@
 		E4DC203F1DF30E2F00B11939 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Umberto Sonnino";
 				TargetAttributes = {
 					E4DC20461DF30E2F00B11939 = {
@@ -412,6 +402,7 @@
 					/usr/local/Cellar/sdl2/2.0.5/lib,
 					/usr/local/Cellar/glew/2.0.0/lib,
 					"$(PROJECT_DIR)",
+					/usr/local/Cellar/assimp/3.3.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -426,6 +417,7 @@
 					/usr/local/Cellar/sdl2/2.0.5/lib,
 					/usr/local/Cellar/glew/2.0.0/lib,
 					"$(PROJECT_DIR)",
+					/usr/local/Cellar/assimp/3.3.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -449,6 +441,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -496,6 +489,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
